@@ -18,6 +18,7 @@ return new class extends Migration
         $table->string('address');
         $table->integer('contact_number');
         $table->integer('phone')->nullable();
+        $table->json('time_parts')->nullable();
         $table->bigInteger('city_id')->unsigned();
         $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         $table->string('name');
