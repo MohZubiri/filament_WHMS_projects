@@ -17,15 +17,14 @@ return new class extends Migration
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->bigInteger('hall_id')->unsigned();
             $table->foreign('hall_id')->references('id')->on('hall_weddings')->onDelete('cascade');
-        //    $table->bigInteger('venue_id')->unsigned();
-          //  $table->foreign('venue_id')->references('id')->on('venues')->onDelete('cascade');
+            $table->bigInteger('interval_id')->unsigned();
+           $table->foreign('interval_id')->references('id')->on('hall_interval')->onDelete('cascade');
             //$table->bigInteger('package_id')->unsigned();
             //$table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('booking_date');
-            $table->time('start_time')->nullable();
-            $table->time('end_time')->nullable();
+
             $table->integer('status')->nullable();
             $table->integer('validate_info')->default(0)->nullable()->comment('0 not give valide info 1 valuidate');
             $table->integer('accept_term')->default(0)->nullable()->comment('0 not accept info 1 accepted');

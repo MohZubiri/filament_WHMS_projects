@@ -23,6 +23,8 @@ return new class extends Migration
         $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         $table->string('name');
         $table->integer('capacity');
+        $table->bigInteger('user_id')->unsigned();
+        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         $table->timestamps();
 
 

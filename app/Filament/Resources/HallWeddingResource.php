@@ -49,9 +49,10 @@ class HallWeddingResource extends Resource
                     ->label('العنوان')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('contact_number')
-                ->label('سعة القاعة')
+                ->label('رقم الهاتف')
                     ->required(),
                 Forms\Components\TextInput::make('phone')
+                ->label('الموبايل ')
                     ->tel(),
 
             ]);
@@ -88,7 +89,7 @@ class HallWeddingResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\ServicesRelationManager::class,
         ];
     }
 
