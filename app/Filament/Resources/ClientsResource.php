@@ -19,7 +19,7 @@ class ClientsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-
+    protected static ?string $pluralModelLabel  = 'إدارة العملاء ';
     public static function form(Form $form): Form
     {
         return $form

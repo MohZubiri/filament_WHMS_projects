@@ -18,7 +18,7 @@ class BookingsResource extends Resource
     protected static ?string $model = Bookings::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-
+    protected static ?string $pluralModelLabel  = 'إداره الحجوزات';
     public static function form(Form $form): Form
     {
         return $form
@@ -47,7 +47,6 @@ class BookingsResource extends Resource
                 Tables\Columns\TextColumn::make('venue.name'),
                 Tables\Columns\TextColumn::make('package.name'),
                 Tables\Columns\TextColumn::make('user.name'),
-
                 Tables\Columns\TextColumn::make('booking_date')
                 ->date('d-m-YY'),
                 Tables\Columns\TextColumn::make('created_at')

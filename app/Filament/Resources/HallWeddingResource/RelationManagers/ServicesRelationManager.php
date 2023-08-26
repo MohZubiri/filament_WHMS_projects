@@ -15,7 +15,7 @@ class ServicesRelationManager extends RelationManager
     protected static string $relationship = 'hallService';
 
     protected static ?string $recordTitleAttribute = 'service_name';
-
+    protected static ?string $pluralModelLabel  = 'خدمات القاعة ';
     public static function form(Form $form): Form
     {
         return $form

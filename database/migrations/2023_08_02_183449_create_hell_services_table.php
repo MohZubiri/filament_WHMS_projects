@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hell_services', function (Blueprint $table) {
+        Schema::create('hall_services', function (Blueprint $table) {
             $table->id();
             $table->BigInteger('hall_id')->unsigned(); // Assuming hell_id is a foreign key
             $table->string('service_name');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hell_services');
+        Schema::dropIfExists('hall_services');
     }
 };

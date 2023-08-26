@@ -16,6 +16,8 @@ return new class extends Migration
         $table->string('latit');
         $table->string('longit');
         $table->string('address');
+        $table->string('main_image')->nullable();
+        $table->string('alt_image')->nullable();
         $table->integer('contact_number');
         $table->integer('phone')->nullable();
         $table->json('time_parts')->nullable();
